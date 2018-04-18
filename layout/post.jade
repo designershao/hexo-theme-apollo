@@ -6,6 +6,8 @@ block site_title
 block description
     - var desc = page.desc || page.title + ' - ' + config.author;
     meta(name="description", content=desc)
+    - var keywords = page.keywords || page.title + ' - ' + config.author;
+    meta(name="keywords", content=keywords)    
 
 block container
     include mixins/post
